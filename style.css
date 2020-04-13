@@ -18,6 +18,7 @@ a {
 
 #logo, .project-img {
     max-height: 300px;
+    animation: transform 1s 1;
 }
 
 #fork img{
@@ -76,10 +77,12 @@ a {
     margin-bottom: 0;
     font-size: 12px;
     letter-spacing: 5px;
+
 }
 
 .navbar-nav li a:hover {
     color: #2e72a1 !important;
+    transition: color 500ms ease;
 }
 
 .red{
@@ -92,3 +95,41 @@ a {
     margin:10px;
 }
 
+@keyframes transform{
+    0%{
+        transform: scale(.35);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.smooth-links:hover{
+    color:Yellow !important;
+    transition: color 400ms linear ;
+}
+.reactive-link1{
+       
+}
+.reactive-link1:hover{
+    background:gray!important;
+ transition: color 400ms linear;
+}
+.owner-name {
+  font-weight: bold;
+  color: navy;
+  content: "Reference ";
+}
+
+
+.nav-reactive-text:hover{
+    color:green!important;
+    transition: color 400ms ease;
+   
+}
+.reactive-text-1:hover{
+    color:darkgreen!important;
+    transition:color 300ms ease;
+    font-size: 1.15rem !important;
+    transition:font-size 400ms ease;
+}

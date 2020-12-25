@@ -105,8 +105,9 @@ a {
 }
 
 .smooth-links:hover{
-    color:Yellow !important;
+    
     transition: color 400ms linear ;
+    color:Yellow !important;
 }
 .reactive-link1{
        
@@ -118,7 +119,7 @@ a {
 .owner-name {
   font-weight: bold;
   color: navy;
-  content: "Reference ";
+  content: "Ivan ";
 }
 
 
@@ -132,4 +133,10 @@ a {
     transition:color 300ms ease;
     font-size: 1.15rem !important;
     transition:font-size 400ms ease;
+}
+.home-blue{
+    background-color:#006DD7;
+}
+.project-text{
+    color: white;
 }

@@ -1,27 +1,43 @@
+/* Global Reset & Base */
 html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font: 20px Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
     line-height: 1.8;
     color: #87CEEB;
+    background-color: #fff;
 }
 
+/* Typography */
 p {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 a {
     color: #2e72a1;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-#logo, .project-img {
+a:hover {
+    color: #1a4d6e;
+}
+
+/* Images */
+#logo,
+.project-img {
     max-height: 300px;
-    animation: transform 1s 1;
+    animation: fade-scale 0.9s ease-out;
+    display: block;
+    margin: 0 auto;
 }
 
-#fork img{
+#fork img {
     height: 25px;
     margin-bottom: 25px;
     filter: invert(1);
@@ -31,22 +47,39 @@ a {
     height: 75px;
 }
 
+/* Layout Helpers */
 .margin {
     margin-bottom: 45px;
 }
 
+.container-fluid {
+    padding: 50px 0;
+}
+
+/* Background Themes */
 .bg-1 {
-    background-color: #ffffff; /* White */
-    color: #555555;
+    background-color: #ffffff;
+    color: #555;
 }
 
 .bg-2 {
-    background-color: #2e72a1; /* Blue */
-    color: #ffffff;
+    background-color: #2e72a1;
+    color: #fff;
 }
 
+.bg-3 {
+    background-color: #000;
+    color: #fff;
+}
+
+.bg-4 {
+    background-color: #343a40;
+    color: #fff;
+}
+
+/* Cards */
 .card {
-    color: black;
+    color: #000;
     text-align: left;
 }
 
@@ -54,95 +87,86 @@ a {
     font-weight: 700;
 }
 
-.bg-3 {
-    background-color: #000000; /* Black */
-    color: #ffffff;
-}
-
-.bg-4 {
-    background-color: #343a40; /* Dark Gray */
-    color: #fff;
-}
-
-.container-fluid {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
+/* Navbar */
 .navbar {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
-
+    padding: 15px 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.25rem;
 }
 
 .navbar-nav li a:hover {
     color: #2e72a1 !important;
-    transition: color 500ms ease;
+    transition: color 0.4s ease;
 }
 
-.red{
-    color:red;
-    background:red;
-}
-
-.reflection{
-    color:red;
-    margin:10px;
-}
-
-@keyframes transform{
-    0%{
-        transform: scale(.35);
+/* Animations */
+@keyframes fade-scale {
+    0% {
+        transform: scale(0.35);
+        opacity: 0;
     }
-    100%{
+    100% {
         transform: scale(1);
+        opacity: 1;
     }
 }
 
-.smooth-links:hover{
-    
-    transition: color 400ms linear ;
-    color:Yellow !important;
-}
-.reactive-link1{
-       
-}
-.reactive-link1:hover{
-    background:gray!important;
- transition: color 400ms linear;
-}
-.owner-name {
-  font-weight: bold;
-  color: navy;
-  content: "Ivan ";
+/* Interactive Text */
+.smooth-links:hover {
+    color: yellow !important;
+    transition: color 0.4s linear;
 }
 
-
-.nav-reactive-text:hover{
-    color:green!important;
-    transition: color 400ms ease;
-   
+.reactive-link1 {
+    padding: 4px 6px;
+    border-radius: 4px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
-.reactive-text-1:hover{
-    color:darkgreen!important;
-    transition:color 300ms ease;
+
+.reactive-link1:hover {
+    background: #6c757d !important;
+    color: #fff !important;
+}
+
+.nav-reactive-text:hover {
+    color: green !important;
+    transition: color 0.4s ease;
+}
+
+.reactive-text-1 {
+    transition: color 0.3s ease, font-size 0.4s ease;
+}
+
+.reactive-text-1:hover {
+    color: darkgreen !important;
     font-size: 1.15rem !important;
-    transition:font-size 400ms ease;
 }
-.home-blue{
-    background-color:#006DD7;
+
+/* Project Section */
+.home-blue {
+    background-color: #006DD7;
 }
-.project-text{
-    color: white;
+
+.project-text {
+    color: #fff;
 }
-.project-spacing{
-    padding:1vw;
+
+.project-spacing {
+    padding: 1vw;
 }
-.sizingtext{
-    font-size:3vw;
+
+/* Responsive Text */
+.sizingtext {
+    font-size: clamp(1rem, 3vw, 2.5rem);
+}
+
+/* Utility Classes */
+.red {
+    color: red;
+    background: red;
+}
+
+.reflection {
+    color: red;
+    margin: 10px;
 }

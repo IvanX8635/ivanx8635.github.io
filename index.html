@@ -1,143 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title class="owner-name">Hi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IvanX — Galactic Portfolio</title>
 
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">IvanX</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <!-- Animated Starfield Background -->
+    <canvas id="starfield"></canvas>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/IvanX8635">Github</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                </ul>
-            </div>
+    <!-- Navbar -->
+    <nav class="nav">
+        <div class="nav-left">IvanX</div>
+        <div class="nav-right">
+            <a href="index.html" class="glow-link">Home</a>
+            <a href="https://github.com/IvanX8635" class="glow-link">Github</a>
+            <a href="#projects" class="glow-link">Projects</a>
         </div>
     </nav>
 
-    <!-- First Container -->
-    <div class="container-fluid bg-1 text-center py-5">
-        <img src="img/logo1.png" class="img-fluid" alt="Logo" id="logo">
-    </div>
+    <!-- Logo Section -->
+    <section class="hero">
+        <img src="img/logo1.png" id="logo" class="logo-glow">
+        <h1 class="hero-title">Welcome to My Universe</h1>
+        <p class="hero-sub">Exploring creativity, code, and cosmic ideas</p>
+    </section>
 
-    <!-- Projects Section -->
-    <h1 class="text-center my-5">Projects</h1>
+    <!-- Projects -->
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">Projects</h2>
 
-    <div class="container text-center" id="projects">
-        <div class="row g-4">
+        <div class="projects-grid">
 
-            <div class="col-md">
-                <div class="p-3 border rounded">
-                    <h3>
-                        <a class="text-decoration-none project-text" href="https://github.com/IvanX8635/post-apocalyptic-adventure">
-                            Check out my choose your adventure project
-                        </a>
-                    </h3>
-                    <img src="" alt="" class="img-fluid">
-                </div>
+            <div class="project-card">
+                <h3><a href="https://github.com/IvanX8635/post-apocalyptic-adventure" class="project-link">Choose Your Adventure</a></h3>
+                <div class="project-img"></div>
             </div>
 
-            <div class="col-md">
-                <div class="p-3 border rounded">
-                    <h3>
-                        <a class="text-decoration-none project-text" href="https://ivanx8635.github.io/projects/deltamath-copy-cat.html">
-                            Check out my copy cat project
-                        </a>
-                    </h3>
-                    <img src="img/deltamath-logo.png" class="img-fluid" alt="Deltamath Logo">
-                </div>
+            <div class="project-card">
+                <h3><a href="https://ivanx8635.github.io/projects/deltamath-copy-cat.html" class="project-link">Deltamath Copycat</a></h3>
+                <img src="img/deltamath-logo.png" class="project-thumb">
             </div>
 
-            <div class="col-md">
-                <div class="p-3 border rounded">
-                    <h3>
-                        <a class="text-decoration-none project-text" href="https://ivanx8635.github.io/projects/shabr-project.html">
-                            SHABR Hot air balloon project
-                        </a>
-                    </h3>
-                    <img src="img/SHABR-clipart.png" class="img-fluid" alt="SHABR Clipart">
-                </div>
+            <div class="project-card">
+                <h3><a href="https://ivanx8635.github.io/projects/shabr-project.html" class="project-link">SHABR Hot Air Balloon</a></h3>
+                <img src="img/SHABR-clipart.png" class="project-thumb">
             </div>
 
-            <div class="col-md">
-                <div class="p-3 border rounded">
-                    <h3>
-                        <a class="text-decoration-none project-text" href="projects/freedom-project.html">
-                            My intro to physics website (Freedom project)
-                        </a>
-                    </h3>
-                    <img src="img/Astronomy.jpg" class="img-fluid" alt="Astronomy">
-                </div>
+            <div class="project-card">
+                <h3><a href="projects/freedom-project.html" class="project-link">Intro to Physics</a></h3>
+                <img src="img/Astronomy.jpg" class="project-thumb">
             </div>
 
         </div>
 
-        <p class="mt-4">More projects coming soon! So stay tuned!</p>
+        <p class="coming-soon">More cosmic creations coming soon…</p>
 
-        <h3>
-            <a class="text-decoration-none sizingtext" style="color:white" href="https://sites.google.com/hstat.org/ivanx8635-sep10/home">
-                Here are my 10th grade projects
-            </a>
-        </h3>
-    </div>
+        <a href="https://sites.google.com/hstat.org/ivanx8635-sep10/home" class="glow-button">
+            View My 10th Grade Projects
+        </a>
+    </section>
 
-    <!-- About Me Section -->
-    <div class="container-fluid bg-3 text-center py-5">
-        <h3>About Me</h3>
-        <div class="row mt-4">
-            <div class="col-sm-4">
-                <p>I am a student from Brooklyn</p>
-            </div>
-            <div class="col-sm-4">
-                <p>Trying my best to contribute to the community and hopefully the world</p>
-            </div>
-            <div class="col-sm-4">
-                <p><strong>"The greatest revenge is success"</strong></p>
-            </div>
+    <!-- About Me -->
+    <section class="about-section">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-grid">
+            <p>I am a student from Brooklyn</p>
+            <p>Trying my best to contribute to the community and hopefully the world</p>
+            <p><strong>"The greatest revenge is success"</strong></p>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="container-fluid bg-4 text-center py-4">
-        <a href="#" target="_blank" id="fork">
-            <img src="img/fork.png" alt="Fork Icon">
-        </a>
-        <br>
-        <a href="https://hstatsep.github.io" target="_blank">
-            <img src="https://hstatsep.github.io/img/hstatsep-logo-small.png" id="sep" alt="HSTAT SEP Logo">
-        </a>
+    <footer class="footer">
+        <img src="img/fork.png" id="fork">
+        <p>© 2026 IvanX — Journey Through the Stars</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-
 </body>
-
 </html>
